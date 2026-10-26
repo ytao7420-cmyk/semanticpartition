@@ -1,0 +1,57 @@
+--- deployed-source-6362aca.py
++++ diagnostic-candidate-798396e.py
+@@ -28,6 +28,11 @@
+ 
+ def _hash(value):
+     return hashlib.sha256(value.encode("utf-8")).hexdigest()
++
++
++def _diagnostic(event, **fields):
++    # Public comparison metadata only. Do not log runtime configuration or errors.
++    print("SEMANTICPARTITION_DIAGNOSTIC " + _json({"event": event, **fields}))
+ 
+ 
+ def _fail(message):
+@@ -203,7 +208,11 @@
+ UNTRUSTED_AUDIT_JSON:
+ """ + _json({"scope": batch["scope"], "left": left, "right": right,
+              "candidate": {key: val for key, val in candidate.items() if key != "reason"}}), response_format="json"))
+-    return isinstance(value, dict) and set(value) == set(AUDIT_FIELDS) and all(type(value[key]) is bool and value[key] for key in AUDIT_FIELDS)
++    shape_valid = isinstance(value, dict) and set(value) == set(AUDIT_FIELDS)
++    accepted = shape_valid and all(type(value[key]) is bool and value[key] for key in AUDIT_FIELDS)
++    flags = {key: value.get(key) if isinstance(value, dict) and type(value.get(key)) is bool else None for key in AUDIT_FIELDS}
++    _diagnostic("audit_result", shape_valid=shape_valid, flags=flags, accepted=accepted)
++    return accepted
+ 
+ 
+ class SemanticPartition(gl.Contract):
+@@ -250,12 +259,27 @@
+ 
+         def validator(proposed):
+             if not isinstance(proposed, gl.vm.Return):
++                _diagnostic("validator_decision", accepted=False, reason="proposal_not_return")
+                 return False
++            stage = "candidate_semantics"
+             try:
+                 candidate = _semantics(proposed.calldata, left, right)
++                stage = "independent_semantics"
+                 independent = _semantics(leader(), left, right)
+-                return all(candidate[field] == independent[field] for field in DIMENSIONS) and _audit(batch, left, right, candidate)
+-            except Exception:
++                mismatches = [field for field in DIMENSIONS if candidate[field] != independent[field]]
++                _diagnostic("independent_comparison", batch_id=batch["id"], scope_sha256=batch["scope_sha256"],
++                            report_ids=ids, candidate={field: candidate[field] for field in DIMENSIONS},
++                            independent={field: independent[field] for field in DIMENSIONS}, mismatched_fields=mismatches)
++                if mismatches:
++                    _diagnostic("validator_decision", accepted=False, reason="dimension_mismatch")
++                    return False
++                stage = "citation_dimension_audit"
++                accepted = _audit(batch, left, right, candidate)
++                _diagnostic("validator_decision", accepted=accepted, reason="accepted" if accepted else "audit_rejected")
++                return accepted
++            except Exception as error:
++                _diagnostic("validator_decision", accepted=False, reason="exception", stage=stage,
++                            exception_type=type(error).__name__)
+                 return False
+ 
+         semantics = _semantics(gl.vm.run_nondet_unsafe(leader, validator), left, right)

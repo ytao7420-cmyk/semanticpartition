@@ -1,0 +1,678 @@
+{
+  "recordedAt": "2026-10-26T11:39:30.602Z",
+  "chainId": 61999,
+  "provider": "0x77281Bd457CC53d6E2Da4a2B6D4223dda86DEC35",
+  "consumer": "0x45fd9AD9B58cCc6207e9b7120781A457AD4c5d4D",
+  "sourceSha256": {
+    "provider": "798396ef6d331453a1f6984e96314baa502f321b8550d19678667848576cf308",
+    "consumer": "04670e87f31a16cc46a323e31b72db27b6a2076cb651a28087468c6c60701f6f"
+  },
+  "presetDigest": "2a59f8e8866f5bcc709dfc435fb36ecee2a68ca0a3387e4bd4dcf0906cfe4ee8",
+  "completeWorkflowVerified": true,
+  "notice": "Selected public diagnostics from one reviewed observability revision run. Original failure evidence is preserved separately. No semantic-policy change, fixture change, original-address resubmission or published submission is implied.",
+  "comparisons": [
+    {
+      "label": "compare-alpha-beta",
+      "hash": "0x07c8a785de342bc0da26633bd6ca088ab96f63a453110f2d8f3803f649eab593",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "executionResult": "SUCCESS",
+      "consensusResult": "MAJORITY_AGREE",
+      "leaderOnly": false,
+      "votes": {
+        "0x007d6451555Df7765c707284F844137927aE4e5E": "agree",
+        "0x045291B293B9D68969c18B6637A8258038cf787A": "disagree",
+        "0x378aED3bA912Ce77C3C66155961A7e61C2fE8F3B": "agree",
+        "0x5D9Ee6E9aAF2F0b739314A52dd9Da57cd8866dA8": "disagree",
+        "0xF7D08d12dB37D3e02D1833b5cB7e56B07F114186": "agree"
+      },
+      "createdAt": "2026-10-26T11:32:39.883545+00:00",
+      "observedAt": "2026-10-26T11:39:21.674Z",
+      "leaderTuple": {
+        "scope_fit": "BOTH",
+        "trigger": "SAME",
+        "symptom": "SAME",
+        "context": "SAME",
+        "consistency": "CONSISTENT"
+      },
+      "validators": [
+        {
+          "address": "0xF7D08d12dB37D3e02D1833b5cB7e56B07F114186",
+          "vote": "agree",
+          "executionResult": "SUCCESS",
+          "diagnosticEvents": [
+            {
+              "batch_id": "csv-demo-v1",
+              "candidate": {
+                "consistency": "CONSISTENT",
+                "context": "SAME",
+                "scope_fit": "BOTH",
+                "symptom": "SAME",
+                "trigger": "SAME"
+              },
+              "event": "independent_comparison",
+              "independent": {
+                "consistency": "CONSISTENT",
+                "context": "SAME",
+                "scope_fit": "BOTH",
+                "symptom": "SAME",
+                "trigger": "SAME"
+              },
+              "mismatched_fields": [],
+              "report_ids": [
+                "alpha",
+                "beta"
+              ],
+              "scope_sha256": "19c075387932ebcf610fdc24cdeaa195d6d3e2eb0ea53906db9b5cd336836632"
+            },
+            {
+              "accepted": true,
+              "event": "audit_result",
+              "flags": {
+                "citations": true,
+                "consistency": true,
+                "context": true,
+                "scope": true,
+                "symptom": true,
+                "trigger": true,
+                "unknown_justified": true
+              },
+              "shape_valid": true
+            },
+            {
+              "accepted": true,
+              "event": "validator_decision",
+              "reason": "accepted"
+            }
+          ],
+          "diagnosticLineCount": 3
+        },
+        {
+          "address": "0x5D9Ee6E9aAF2F0b739314A52dd9Da57cd8866dA8",
+          "vote": "disagree",
+          "executionResult": "SUCCESS",
+          "diagnosticEvents": [
+            {
+              "batch_id": "csv-demo-v1",
+              "candidate": {
+                "consistency": "CONSISTENT",
+                "context": "SAME",
+                "scope_fit": "BOTH",
+                "symptom": "SAME",
+                "trigger": "SAME"
+              },
+              "event": "independent_comparison",
+              "independent": {
+                "consistency": "CONSISTENT",
+                "context": "SAME",
+                "scope_fit": "BOTH",
+                "symptom": "SAME",
+                "trigger": "SAME"
+              },
+              "mismatched_fields": [],
+              "report_ids": [
+                "alpha",
+                "beta"
+              ],
+              "scope_sha256": "19c075387932ebcf610fdc24cdeaa195d6d3e2eb0ea53906db9b5cd336836632"
+            },
+            {
+              "accepted": false,
+              "event": "audit_result",
+              "flags": {
+                "citations": true,
+                "consistency": true,
+                "context": true,
+                "scope": true,
+                "symptom": true,
+                "trigger": true,
+                "unknown_justified": false
+              },
+              "shape_valid": true
+            },
+            {
+              "accepted": false,
+              "event": "validator_decision",
+              "reason": "audit_rejected"
+            }
+          ],
+          "diagnosticLineCount": 3
+        },
+        {
+          "address": "0x045291B293B9D68969c18B6637A8258038cf787A",
+          "vote": "disagree",
+          "executionResult": "SUCCESS",
+          "diagnosticEvents": [
+            {
+              "batch_id": "csv-demo-v1",
+              "candidate": {
+                "consistency": "CONSISTENT",
+                "context": "SAME",
+                "scope_fit": "BOTH",
+                "symptom": "SAME",
+                "trigger": "SAME"
+              },
+              "event": "independent_comparison",
+              "independent": {
+                "consistency": "CONSISTENT",
+                "context": "SAME",
+                "scope_fit": "BOTH",
+                "symptom": "SAME",
+                "trigger": "SAME"
+              },
+              "mismatched_fields": [],
+              "report_ids": [
+                "alpha",
+                "beta"
+              ],
+              "scope_sha256": "19c075387932ebcf610fdc24cdeaa195d6d3e2eb0ea53906db9b5cd336836632"
+            },
+            {
+              "accepted": false,
+              "event": "audit_result",
+              "flags": {
+                "citations": true,
+                "consistency": true,
+                "context": true,
+                "scope": true,
+                "symptom": true,
+                "trigger": true,
+                "unknown_justified": false
+              },
+              "shape_valid": true
+            },
+            {
+              "accepted": false,
+              "event": "validator_decision",
+              "reason": "audit_rejected"
+            }
+          ],
+          "diagnosticLineCount": 3
+        },
+        {
+          "address": "0x007d6451555Df7765c707284F844137927aE4e5E",
+          "vote": "agree",
+          "executionResult": "SUCCESS",
+          "diagnosticEvents": [
+            {
+              "batch_id": "csv-demo-v1",
+              "candidate": {
+                "consistency": "CONSISTENT",
+                "context": "SAME",
+                "scope_fit": "BOTH",
+                "symptom": "SAME",
+                "trigger": "SAME"
+              },
+              "event": "independent_comparison",
+              "independent": {
+                "consistency": "CONSISTENT",
+                "context": "SAME",
+                "scope_fit": "BOTH",
+                "symptom": "SAME",
+                "trigger": "SAME"
+              },
+              "mismatched_fields": [],
+              "report_ids": [
+                "alpha",
+                "beta"
+              ],
+              "scope_sha256": "19c075387932ebcf610fdc24cdeaa195d6d3e2eb0ea53906db9b5cd336836632"
+            },
+            {
+              "accepted": true,
+              "event": "audit_result",
+              "flags": {
+                "citations": true,
+                "consistency": true,
+                "context": true,
+                "scope": true,
+                "symptom": true,
+                "trigger": true,
+                "unknown_justified": true
+              },
+              "shape_valid": true
+            },
+            {
+              "accepted": true,
+              "event": "validator_decision",
+              "reason": "accepted"
+            }
+          ],
+          "diagnosticLineCount": 3
+        }
+      ],
+      "storedPairPresent": true,
+      "storedRelation": "DUPLICATE"
+    },
+    {
+      "label": "compare-beta-gamma",
+      "hash": "0xe8e69055d008d86f0866cf3e4c4a37a35db6a80fe61b040c3cb1dfee74395915",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "executionResult": "SUCCESS",
+      "consensusResult": "MAJORITY_AGREE",
+      "leaderOnly": false,
+      "votes": {
+        "0x045291B293B9D68969c18B6637A8258038cf787A": "agree",
+        "0x378aED3bA912Ce77C3C66155961A7e61C2fE8F3B": "agree",
+        "0x4441Ebe37E72c039B73f1D6CF8C6DEe277FE547a": "agree",
+        "0x4868b172ddEBC18b5219aaCeAB77ae0Df330c83A": "disagree",
+        "0xB4EE99165ffe987E64B7b72e45a753309c501eef": "disagree"
+      },
+      "createdAt": "2026-10-26T11:33:39.338809+00:00",
+      "observedAt": "2026-10-26T11:39:26.349Z",
+      "leaderTuple": {
+        "scope_fit": "BOTH",
+        "trigger": "DISJOINT",
+        "symptom": "DIFFERENT",
+        "context": "SAME",
+        "consistency": "CONSISTENT"
+      },
+      "validators": [
+        {
+          "address": "0x045291B293B9D68969c18B6637A8258038cf787A",
+          "vote": "agree",
+          "executionResult": "SUCCESS",
+          "diagnosticEvents": [
+            {
+              "batch_id": "csv-demo-v1",
+              "candidate": {
+                "consistency": "CONSISTENT",
+                "context": "SAME",
+                "scope_fit": "BOTH",
+                "symptom": "DIFFERENT",
+                "trigger": "DISJOINT"
+              },
+              "event": "independent_comparison",
+              "independent": {
+                "consistency": "CONSISTENT",
+                "context": "SAME",
+                "scope_fit": "BOTH",
+                "symptom": "DIFFERENT",
+                "trigger": "DISJOINT"
+              },
+              "mismatched_fields": [],
+              "report_ids": [
+                "beta",
+                "gamma"
+              ],
+              "scope_sha256": "19c075387932ebcf610fdc24cdeaa195d6d3e2eb0ea53906db9b5cd336836632"
+            },
+            {
+              "accepted": true,
+              "event": "audit_result",
+              "flags": {
+                "citations": true,
+                "consistency": true,
+                "context": true,
+                "scope": true,
+                "symptom": true,
+                "trigger": true,
+                "unknown_justified": true
+              },
+              "shape_valid": true
+            },
+            {
+              "accepted": true,
+              "event": "validator_decision",
+              "reason": "accepted"
+            }
+          ],
+          "diagnosticLineCount": 3
+        },
+        {
+          "address": "0xB4EE99165ffe987E64B7b72e45a753309c501eef",
+          "vote": "disagree",
+          "executionResult": "SUCCESS",
+          "diagnosticEvents": [
+            {
+              "accepted": false,
+              "event": "validator_decision",
+              "exception_type": "UserError",
+              "reason": "exception",
+              "stage": "independent_semantics"
+            }
+          ],
+          "diagnosticLineCount": 1
+        },
+        {
+          "address": "0x378aED3bA912Ce77C3C66155961A7e61C2fE8F3B",
+          "vote": "agree",
+          "executionResult": "SUCCESS",
+          "diagnosticEvents": [
+            {
+              "batch_id": "csv-demo-v1",
+              "candidate": {
+                "consistency": "CONSISTENT",
+                "context": "SAME",
+                "scope_fit": "BOTH",
+                "symptom": "DIFFERENT",
+                "trigger": "DISJOINT"
+              },
+              "event": "independent_comparison",
+              "independent": {
+                "consistency": "CONSISTENT",
+                "context": "SAME",
+                "scope_fit": "BOTH",
+                "symptom": "DIFFERENT",
+                "trigger": "DISJOINT"
+              },
+              "mismatched_fields": [],
+              "report_ids": [
+                "beta",
+                "gamma"
+              ],
+              "scope_sha256": "19c075387932ebcf610fdc24cdeaa195d6d3e2eb0ea53906db9b5cd336836632"
+            },
+            {
+              "accepted": true,
+              "event": "audit_result",
+              "flags": {
+                "citations": true,
+                "consistency": true,
+                "context": true,
+                "scope": true,
+                "symptom": true,
+                "trigger": true,
+                "unknown_justified": true
+              },
+              "shape_valid": true
+            },
+            {
+              "accepted": true,
+              "event": "validator_decision",
+              "reason": "accepted"
+            }
+          ],
+          "diagnosticLineCount": 3
+        },
+        {
+          "address": "0x4868b172ddEBC18b5219aaCeAB77ae0Df330c83A",
+          "vote": "disagree",
+          "executionResult": "SUCCESS",
+          "diagnosticEvents": [
+            {
+              "batch_id": "csv-demo-v1",
+              "candidate": {
+                "consistency": "CONSISTENT",
+                "context": "SAME",
+                "scope_fit": "BOTH",
+                "symptom": "DIFFERENT",
+                "trigger": "DISJOINT"
+              },
+              "event": "independent_comparison",
+              "independent": {
+                "consistency": "CONSISTENT",
+                "context": "SAME",
+                "scope_fit": "BOTH",
+                "symptom": "DIFFERENT",
+                "trigger": "DISJOINT"
+              },
+              "mismatched_fields": [],
+              "report_ids": [
+                "beta",
+                "gamma"
+              ],
+              "scope_sha256": "19c075387932ebcf610fdc24cdeaa195d6d3e2eb0ea53906db9b5cd336836632"
+            },
+            {
+              "accepted": false,
+              "event": "audit_result",
+              "flags": {
+                "citations": false,
+                "consistency": true,
+                "context": true,
+                "scope": true,
+                "symptom": true,
+                "trigger": true,
+                "unknown_justified": true
+              },
+              "shape_valid": true
+            },
+            {
+              "accepted": false,
+              "event": "validator_decision",
+              "reason": "audit_rejected"
+            }
+          ],
+          "diagnosticLineCount": 3
+        }
+      ],
+      "storedPairPresent": true,
+      "storedRelation": "DISTINCT"
+    },
+    {
+      "label": "compare-alpha-gamma",
+      "hash": "0x8e4853562c1ae7ad84a527fbd00f141c7348088ec99da09f89300d63419ae8a3",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "executionResult": "SUCCESS",
+      "consensusResult": "MAJORITY_AGREE",
+      "leaderOnly": false,
+      "votes": {
+        "0x336458747913FE397be82c4F0926ACeB3ab13618": "agree",
+        "0x4868b172ddEBC18b5219aaCeAB77ae0Df330c83A": "agree",
+        "0x9C182DE7F93AdbE8ee3D62570613eC23c5683cAc": "disagree",
+        "0xCe0B66448435cA53665C954705Abd753515594Cf": "disagree",
+        "0xcab45E3fe9cC9592B5C378E47734E022b7Df80c9": "agree"
+      },
+      "createdAt": "2026-10-26T11:34:42.325297+00:00",
+      "observedAt": "2026-10-26T11:39:30.600Z",
+      "leaderTuple": {
+        "scope_fit": "BOTH",
+        "trigger": "DISJOINT",
+        "symptom": "DIFFERENT",
+        "context": "SAME",
+        "consistency": "CONSISTENT"
+      },
+      "validators": [
+        {
+          "address": "0x4868b172ddEBC18b5219aaCeAB77ae0Df330c83A",
+          "vote": "agree",
+          "executionResult": "SUCCESS",
+          "diagnosticEvents": [
+            {
+              "batch_id": "csv-demo-v1",
+              "candidate": {
+                "consistency": "CONSISTENT",
+                "context": "SAME",
+                "scope_fit": "BOTH",
+                "symptom": "DIFFERENT",
+                "trigger": "DISJOINT"
+              },
+              "event": "independent_comparison",
+              "independent": {
+                "consistency": "CONSISTENT",
+                "context": "SAME",
+                "scope_fit": "BOTH",
+                "symptom": "DIFFERENT",
+                "trigger": "DISJOINT"
+              },
+              "mismatched_fields": [],
+              "report_ids": [
+                "alpha",
+                "gamma"
+              ],
+              "scope_sha256": "19c075387932ebcf610fdc24cdeaa195d6d3e2eb0ea53906db9b5cd336836632"
+            },
+            {
+              "accepted": true,
+              "event": "audit_result",
+              "flags": {
+                "citations": true,
+                "consistency": true,
+                "context": true,
+                "scope": true,
+                "symptom": true,
+                "trigger": true,
+                "unknown_justified": true
+              },
+              "shape_valid": true
+            },
+            {
+              "accepted": true,
+              "event": "validator_decision",
+              "reason": "accepted"
+            }
+          ],
+          "diagnosticLineCount": 3
+        },
+        {
+          "address": "0xcab45E3fe9cC9592B5C378E47734E022b7Df80c9",
+          "vote": "agree",
+          "executionResult": "SUCCESS",
+          "diagnosticEvents": [
+            {
+              "batch_id": "csv-demo-v1",
+              "candidate": {
+                "consistency": "CONSISTENT",
+                "context": "SAME",
+                "scope_fit": "BOTH",
+                "symptom": "DIFFERENT",
+                "trigger": "DISJOINT"
+              },
+              "event": "independent_comparison",
+              "independent": {
+                "consistency": "CONSISTENT",
+                "context": "SAME",
+                "scope_fit": "BOTH",
+                "symptom": "DIFFERENT",
+                "trigger": "DISJOINT"
+              },
+              "mismatched_fields": [],
+              "report_ids": [
+                "alpha",
+                "gamma"
+              ],
+              "scope_sha256": "19c075387932ebcf610fdc24cdeaa195d6d3e2eb0ea53906db9b5cd336836632"
+            },
+            {
+              "accepted": true,
+              "event": "audit_result",
+              "flags": {
+                "citations": true,
+                "consistency": true,
+                "context": true,
+                "scope": true,
+                "symptom": true,
+                "trigger": true,
+                "unknown_justified": true
+              },
+              "shape_valid": true
+            },
+            {
+              "accepted": true,
+              "event": "validator_decision",
+              "reason": "accepted"
+            }
+          ],
+          "diagnosticLineCount": 3
+        },
+        {
+          "address": "0xCe0B66448435cA53665C954705Abd753515594Cf",
+          "vote": "disagree",
+          "executionResult": "SUCCESS",
+          "diagnosticEvents": [
+            {
+              "batch_id": "csv-demo-v1",
+              "candidate": {
+                "consistency": "CONSISTENT",
+                "context": "SAME",
+                "scope_fit": "BOTH",
+                "symptom": "DIFFERENT",
+                "trigger": "DISJOINT"
+              },
+              "event": "independent_comparison",
+              "independent": {
+                "consistency": "CONSISTENT",
+                "context": "SAME",
+                "scope_fit": "BOTH",
+                "symptom": "DIFFERENT",
+                "trigger": "DISJOINT"
+              },
+              "mismatched_fields": [],
+              "report_ids": [
+                "alpha",
+                "gamma"
+              ],
+              "scope_sha256": "19c075387932ebcf610fdc24cdeaa195d6d3e2eb0ea53906db9b5cd336836632"
+            },
+            {
+              "accepted": false,
+              "event": "audit_result",
+              "flags": {
+                "citations": true,
+                "consistency": true,
+                "context": true,
+                "scope": true,
+                "symptom": true,
+                "trigger": true,
+                "unknown_justified": false
+              },
+              "shape_valid": true
+            },
+            {
+              "accepted": false,
+              "event": "validator_decision",
+              "reason": "audit_rejected"
+            }
+          ],
+          "diagnosticLineCount": 3
+        },
+        {
+          "address": "0x336458747913FE397be82c4F0926ACeB3ab13618",
+          "vote": "agree",
+          "executionResult": "SUCCESS",
+          "diagnosticEvents": [
+            {
+              "batch_id": "csv-demo-v1",
+              "candidate": {
+                "consistency": "CONSISTENT",
+                "context": "SAME",
+                "scope_fit": "BOTH",
+                "symptom": "DIFFERENT",
+                "trigger": "DISJOINT"
+              },
+              "event": "independent_comparison",
+              "independent": {
+                "consistency": "CONSISTENT",
+                "context": "SAME",
+                "scope_fit": "BOTH",
+                "symptom": "DIFFERENT",
+                "trigger": "DISJOINT"
+              },
+              "mismatched_fields": [],
+              "report_ids": [
+                "alpha",
+                "gamma"
+              ],
+              "scope_sha256": "19c075387932ebcf610fdc24cdeaa195d6d3e2eb0ea53906db9b5cd336836632"
+            },
+            {
+              "accepted": true,
+              "event": "audit_result",
+              "flags": {
+                "citations": true,
+                "consistency": true,
+                "context": true,
+                "scope": true,
+                "symptom": true,
+                "trigger": true,
+                "unknown_justified": true
+              },
+              "shape_valid": true
+            },
+            {
+              "accepted": true,
+              "event": "validator_decision",
+              "reason": "accepted"
+            }
+          ],
+          "diagnosticLineCount": 3
+        }
+      ],
+      "storedPairPresent": true,
+      "storedRelation": "DISTINCT"
+    }
+  ]
+}

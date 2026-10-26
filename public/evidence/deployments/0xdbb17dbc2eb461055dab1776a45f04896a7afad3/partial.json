@@ -1,0 +1,450 @@
+{
+  "verified": false,
+  "supportedEvidenceVerified": true,
+  "recordedAt": "2026-10-26T11:08:53.213Z",
+  "network": "GenLayer Studionet",
+  "chainId": 61999,
+  "providerAddress": "0xDBb17Dbc2Eb461055dab1776a45f04896A7afad3",
+  "consumerAddress": "0x81D1eb6fF7684D9dA5A33F165Ad136C6EDA43FE1",
+  "sourceSha256": {
+    "provider": "6362aca980dbff00731f33c27d7dea263cc2004544d7be35cf71a2aba232233f",
+    "consumer": "04670e87f31a16cc46a323e31b72db27b6a2076cb651a28087468c6c60701f6f"
+  },
+  "presetDigest": "2a59f8e8866f5bcc709dfc435fb36ecee2a68ca0a3387e4bd4dcf0906cfe4ee8",
+  "actors": {
+    "creator": "0x490bF6B423D6A85C88397d56E5120C483c2393F3",
+    "consumer": "0x11e7165C24264B39c04347936Da2F812ea40EA52"
+  },
+  "notice": "Synthetic issue reports and project-controlled actors. This is a bounded description comparison, not an authenticated software defect or root-cause claim. Studionet only, zero value.",
+  "batch": {
+    "chain_id": 61999,
+    "digest": "71f883b0dcc774a88b1644898848f115e87406de1dc07982e4e6d2b457bcd6f7",
+    "id": "csv-demo-v1",
+    "input_provenance": "Caller-asserted descriptions; not authenticated root causes",
+    "owner": "0x490bf6b423d6a85c88397d56e5120c483c2393f3",
+    "protocol": "semanticpartition-complete-edge-v1",
+    "provider": "0xdbb17dbc2eb461055dab1776a45f04896a7afad3",
+    "reports": [
+      {
+        "id": "alpha",
+        "lines": [
+          "Context: AtlasDesk 3.2, desktop Firefox 125, English UI.",
+          "Steps: set the status filter to Open, then select Export CSV.",
+          "Observed: two Open rows are visible; download completes but the CSV contains only column headers and no data rows.",
+          "No claim about the internal cause is made."
+        ],
+        "text": "Context: AtlasDesk 3.2, desktop Firefox 125, English UI.\nSteps: set the status filter to Open, then select Export CSV.\nObserved: two Open rows are visible; download completes but the CSV contains only column headers and no data rows.\nNo claim about the internal cause is made.",
+        "text_sha256": "8e28072f2208af7c72200255f82e8dce22219cace94498ad84b8682156db094f"
+      },
+      {
+        "id": "beta",
+        "lines": [
+          "Context: AtlasDesk 3.2, desktop Firefox 125, English UI.",
+          "Steps: apply the Open-status filter and click Export CSV.",
+          "Observed: the completed CSV has its column header but omits both Open rows displayed in the filtered list.",
+          "The internal cause was not investigated."
+        ],
+        "text": "Context: AtlasDesk 3.2, desktop Firefox 125, English UI.\nSteps: apply the Open-status filter and click Export CSV.\nObserved: the completed CSV has its column header but omits both Open rows displayed in the filtered list.\nThe internal cause was not investigated.",
+        "text_sha256": "4b9b829c964f352d2bd7df21ff8631b8057886317de9dd72c887c5816b1b4ac8"
+      },
+      {
+        "id": "gamma",
+        "lines": [
+          "Context: AtlasDesk 3.2, desktop Firefox 125, English UI.",
+          "Steps: leave the status filter unset and click Export CSV.",
+          "Observed: all data rows are present in the completed CSV, but accented names become replacement characters.",
+          "The internal cause was not investigated."
+        ],
+        "text": "Context: AtlasDesk 3.2, desktop Firefox 125, English UI.\nSteps: leave the status filter unset and click Export CSV.\nObserved: all data rows are present in the completed CSV, but accented names become replacement characters.\nThe internal cause was not investigated.",
+        "text_sha256": "755774516db70de939b5d2dc0bfa02ca1b94d8ce654dc43aac209fb653a9caac"
+      }
+    ],
+    "scope": "Compare AtlasDesk 3.2 desktop Firefox 125 CSV export reports by their exact triggering filter/steps, observable downloaded-file symptom and stated product/version/browser context. All CSV export reports are in scope; shared export vocabulary alone does not establish the same observable issue.",
+    "scope_sha256": "19c075387932ebcf610fdc24cdeaa195d6d3e2eb0ea53906db9b5cd336836632"
+  },
+  "pairs": [
+    {
+      "batch_digest": "71f883b0dcc774a88b1644898848f115e87406de1dc07982e4e6d2b457bcd6f7",
+      "chain_id": 61999,
+      "digest": "3113436bf8fc2901db98d520957418961e5e27f8d02718a99e83b45511bb9fd2",
+      "members": [
+        {
+          "id": "alpha",
+          "text_sha256": "8e28072f2208af7c72200255f82e8dce22219cace94498ad84b8682156db094f"
+        },
+        {
+          "id": "beta",
+          "text_sha256": "4b9b829c964f352d2bd7df21ff8631b8057886317de9dd72c887c5816b1b4ac8"
+        }
+      ],
+      "protocol": "semanticpartition-complete-edge-v1",
+      "provider": "0xdbb17dbc2eb461055dab1776a45f04896a7afad3",
+      "reason_provenance": "Leader-authored explanation; dimensions and substantive citations independently audited",
+      "relation": "DUPLICATE",
+      "scope_sha256": "19c075387932ebcf610fdc24cdeaa195d6d3e2eb0ea53906db9b5cd336836632",
+      "semantics": {
+        "consistency": "CONSISTENT",
+        "context": "SAME",
+        "left_spans": [
+          {
+            "end": 3,
+            "quote": "Context: AtlasDesk 3.2, desktop Firefox 125, English UI.\nSteps: set the status filter to Open, then select Export CSV.\nObserved: two Open rows are visible; download completes but the CSV contains only column headers and no data rows.",
+            "start": 1
+          }
+        ],
+        "reason": "Both reports describe the exact same context (AtlasDesk 3.2, Firefox 125), the same trigger (applying an 'Open' status filter followed by CSV export), and the same observable symptom (a CSV file containing only headers despite two visible rows in the UI). The descriptions are functionally identical regarding the user-facing behavior.",
+        "right_spans": [
+          {
+            "end": 3,
+            "quote": "Context: AtlasDesk 3.2, desktop Firefox 125, English UI.\nSteps: apply the Open-status filter and click Export CSV.\nObserved: the completed CSV has its column header but omits both Open rows displayed in the filtered list.",
+            "start": 1
+          }
+        ],
+        "scope_fit": "BOTH",
+        "symptom": "SAME",
+        "trigger": "SAME"
+      }
+    }
+  ],
+  "certificate": {
+    "batch_digest": "71f883b0dcc774a88b1644898848f115e87406de1dc07982e4e6d2b457bcd6f7",
+    "batch_id": "csv-demo-v1",
+    "chain_id": 61999,
+    "coverage": "All internal report pairs only; no authenticated root cause, optimal partition or inter-group distinctness",
+    "digest": "74b85ed1f9bc4ae0c0f4c7dce79a2c694d44c6a771ea4635dd0613a41d47a677",
+    "id": "open-filter-duplicate",
+    "members": [
+      {
+        "id": "alpha",
+        "text_sha256": "8e28072f2208af7c72200255f82e8dce22219cace94498ad84b8682156db094f"
+      },
+      {
+        "id": "beta",
+        "text_sha256": "4b9b829c964f352d2bd7df21ff8631b8057886317de9dd72c887c5816b1b4ac8"
+      }
+    ],
+    "members_sha256": "d58554a9314e223dbe981e931155ec1cb28b9479f664cc626f6a2f2a962db8af",
+    "owner": "0x490bf6b423d6a85c88397d56e5120c483c2393f3",
+    "pair_count": 1,
+    "pair_digests": [
+      "3113436bf8fc2901db98d520957418961e5e27f8d02718a99e83b45511bb9fd2"
+    ],
+    "protocol": "semanticpartition-complete-edge-v1",
+    "provider": "0xdbb17dbc2eb461055dab1776a45f04896a7afad3",
+    "relation": "COMPLETE_DUPLICATE_CLIQUE",
+    "scope_sha256": "19c075387932ebcf610fdc24cdeaa195d6d3e2eb0ea53906db9b5cd336836632"
+  },
+  "consumerReceipt": {
+    "batch_digest": "71f883b0dcc774a88b1644898848f115e87406de1dc07982e4e6d2b457bcd6f7",
+    "batch_id": "csv-demo-v1",
+    "certificate_digest": "74b85ed1f9bc4ae0c0f4c7dce79a2c694d44c6a771ea4635dd0613a41d47a677",
+    "certificate_id": "open-filter-duplicate",
+    "chain_id": 61999,
+    "consumer": "0x11e7165c24264b39c04347936da2f812ea40ea52",
+    "consumer_contract": "0x81d1eb6ff7684d9da5a33f165ad136c6eda43fe1",
+    "digest": "e598c132249e7e4c6fa89d91b9d91d9938a503def3268eaa2fe3241fdb9f0a4b",
+    "id": "consume-group",
+    "members": [
+      {
+        "id": "alpha",
+        "text_sha256": "8e28072f2208af7c72200255f82e8dce22219cace94498ad84b8682156db094f"
+      },
+      {
+        "id": "beta",
+        "text_sha256": "4b9b829c964f352d2bd7df21ff8631b8057886317de9dd72c887c5816b1b4ac8"
+      }
+    ],
+    "members_sha256": "d58554a9314e223dbe981e931155ec1cb28b9479f664cc626f6a2f2a962db8af",
+    "owner": "0x490bf6b423d6a85c88397d56e5120c483c2393f3",
+    "pair_count": 1,
+    "provider": "0xdbb17dbc2eb461055dab1776a45f04896a7afad3",
+    "purpose": "Explicit reliance on an immutable bounded report group",
+    "scope_sha256": "19c075387932ebcf610fdc24cdeaa195d6d3e2eb0ea53906db9b5cd336836632"
+  },
+  "failedPairReadBack": null,
+  "unattemptedPairReadBack": null,
+  "negativeConsumerReadBack": null,
+  "invalidGroupReadBack": null,
+  "transactions": [
+    {
+      "label": "freeze-batch",
+      "spec": {
+        "kind": "call",
+        "address": "0xDBb17Dbc2Eb461055dab1776a45f04896A7afad3",
+        "actor": "0x490bF6B423D6A85C88397d56E5120C483c2393F3",
+        "method": "freeze_batch",
+        "args": [
+          "csv-demo-v1",
+          "Compare AtlasDesk 3.2 desktop Firefox 125 CSV export reports by their exact triggering filter/steps, observable downloaded-file symptom and stated product/version/browser context. All CSV export reports are in scope; shared export vocabulary alone does not establish the same observable issue.",
+          "[{\"id\":\"alpha\",\"text\":\"Context: AtlasDesk 3.2, desktop Firefox 125, English UI.\\nSteps: set the status filter to Open, then select Export CSV.\\nObserved: two Open rows are visible; download completes but the CSV contains only column headers and no data rows.\\nNo claim about the internal cause is made.\"},{\"id\":\"beta\",\"text\":\"Context: AtlasDesk 3.2, desktop Firefox 125, English UI.\\nSteps: apply the Open-status filter and click Export CSV.\\nObserved: the completed CSV has its column header but omits both Open rows displayed in the filtered list.\\nThe internal cause was not investigated.\"},{\"id\":\"gamma\",\"text\":\"Context: AtlasDesk 3.2, desktop Firefox 125, English UI.\\nSteps: leave the status filter unset and click Export CSV.\\nObserved: all data rows are present in the completed CSV, but accented names become replacement characters.\\nThe internal cause was not investigated.\"}]"
+        ],
+        "value": "0",
+        "leaderOnly": false
+      },
+      "intendedAt": "2026-10-26T10:04:01.220Z",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "hash": "0xf3126771bd8324b3781c05634c48e860b792ba50c8f18760aee5a914561a2208",
+      "submittedAt": "2026-10-26T10:04:02.971Z",
+      "executionResult": "SUCCESS",
+      "consensusResult": "MAJORITY_AGREE",
+      "leaderOnly": false,
+      "votes": {
+        "0x4868b172ddEBC18b5219aaCeAB77ae0Df330c83A": "idle",
+        "0x5D9Ee6E9aAF2F0b739314A52dd9Da57cd8866dA8": "agree",
+        "0x5e84e17266a193077728229751aC8A1dD24be146": "agree",
+        "0xB4EE99165ffe987E64B7b72e45a753309c501eef": "idle",
+        "0xF7D08d12dB37D3e02D1833b5cB7e56B07F114186": "agree"
+      },
+      "createdAt": "2026-10-26T10:04:02.788481+00:00",
+      "observedAt": "2026-10-26T11:08:59.145Z"
+    },
+    {
+      "label": "compare-alpha-beta",
+      "spec": {
+        "kind": "call",
+        "address": "0xDBb17Dbc2Eb461055dab1776a45f04896A7afad3",
+        "actor": "0x490bF6B423D6A85C88397d56E5120C483c2393F3",
+        "method": "compare_pair",
+        "args": [
+          "csv-demo-v1",
+          "alpha",
+          "beta"
+        ],
+        "value": "0",
+        "leaderOnly": false
+      },
+      "intendedAt": "2026-10-26T10:04:12.443Z",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "hash": "0xce1f22eec044246758555bb03ed385f4374d6a43f201fb5751e6e628639f5189",
+      "submittedAt": "2026-10-26T10:04:14.188Z",
+      "executionResult": "SUCCESS",
+      "consensusResult": "MAJORITY_AGREE",
+      "leaderOnly": false,
+      "votes": {
+        "0x336458747913FE397be82c4F0926ACeB3ab13618": "idle",
+        "0x5D9Ee6E9aAF2F0b739314A52dd9Da57cd8866dA8": "agree",
+        "0x5e84e17266a193077728229751aC8A1dD24be146": "agree",
+        "0x63d72fE364368491E62a42B9C73c317Ce1ca8434": "agree",
+        "0xb9ed1258763dfFC83356b15e8A20236B86E42ba2": "disagree"
+      },
+      "createdAt": "2026-10-26T10:04:13.965251+00:00",
+      "observedAt": "2026-10-26T11:09:01.078Z"
+    },
+    {
+      "label": "certify-two",
+      "spec": {
+        "kind": "call",
+        "address": "0xDBb17Dbc2Eb461055dab1776a45f04896A7afad3",
+        "actor": "0x490bF6B423D6A85C88397d56E5120C483c2393F3",
+        "method": "certify_group",
+        "args": [
+          "csv-demo-v1",
+          "open-filter-duplicate",
+          "[\"alpha\",\"beta\"]"
+        ],
+        "value": "0",
+        "leaderOnly": false
+      },
+      "intendedAt": "2026-10-26T10:04:43.880Z",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "hash": "0xd17ca242adbfef3f2ce1259046a6136a4e69cabfe9f2c63fdbcc029194ea4f72",
+      "submittedAt": "2026-10-26T10:04:46.749Z",
+      "executionResult": "SUCCESS",
+      "consensusResult": "MAJORITY_AGREE",
+      "leaderOnly": false,
+      "votes": {
+        "0x4619C8420D50c9dE477DB2CBb7b4863A041688CB": "agree",
+        "0x5847AF34a4e5bA96490f8c883598f68EC9B0B907": "agree",
+        "0x5e84e17266a193077728229751aC8A1dD24be146": "idle",
+        "0xB4EE99165ffe987E64B7b72e45a753309c501eef": "agree",
+        "0xF7D08d12dB37D3e02D1833b5cB7e56B07F114186": "idle"
+      },
+      "createdAt": "2026-10-26T10:04:46.345966+00:00",
+      "observedAt": "2026-10-26T11:09:03.556Z"
+    },
+    {
+      "label": "compare-beta-gamma",
+      "spec": {
+        "kind": "call",
+        "address": "0xDBb17Dbc2Eb461055dab1776a45f04896A7afad3",
+        "actor": "0x490bF6B423D6A85C88397d56E5120C483c2393F3",
+        "method": "compare_pair",
+        "args": [
+          "csv-demo-v1",
+          "beta",
+          "gamma"
+        ],
+        "value": "0",
+        "leaderOnly": false
+      },
+      "intendedAt": "2026-10-26T10:05:00.357Z",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "hash": "0xbd370396f4569a8e4abe206b3fcab6ae5222713558d477430d5d920f42e47c75",
+      "submittedAt": "2026-10-26T10:05:03.287Z",
+      "executionResult": "SUCCESS",
+      "consensusResult": "MAJORITY_DISAGREE",
+      "leaderOnly": false,
+      "votes": {
+        "0x007d6451555Df7765c707284F844137927aE4e5E": "disagree",
+        "0x4441Ebe37E72c039B73f1D6CF8C6DEe277FE547a": "disagree",
+        "0x9C182DE7F93AdbE8ee3D62570613eC23c5683cAc": "idle",
+        "0xb04cdDC4a6Ff6A0aDF715cfe00Fa307b901cebD4": "disagree",
+        "0xcab45E3fe9cC9592B5C378E47734E022b7Df80c9": "idle"
+      },
+      "createdAt": "2026-10-26T10:05:03.051035+00:00",
+      "observedAt": "2026-10-26T11:07:26.521Z",
+      "failure": "Validator majority disagreed; no committed pair state."
+    },
+    {
+      "label": "consume-exact-group",
+      "spec": {
+        "kind": "call",
+        "address": "0x81D1eb6fF7684D9dA5A33F165Ad136C6EDA43FE1",
+        "actor": "0x11e7165C24264B39c04347936Da2F812ea40EA52",
+        "method": "consume",
+        "args": [
+          "consume-group",
+          "0x490bf6b423d6a85c88397d56e5120c483c2393f3",
+          "csv-demo-v1",
+          "open-filter-duplicate",
+          "74b85ed1f9bc4ae0c0f4c7dce79a2c694d44c6a771ea4635dd0613a41d47a677",
+          "71f883b0dcc774a88b1644898848f115e87406de1dc07982e4e6d2b457bcd6f7",
+          "19c075387932ebcf610fdc24cdeaa195d6d3e2eb0ea53906db9b5cd336836632",
+          "[{\"id\":\"alpha\",\"text_sha256\":\"8e28072f2208af7c72200255f82e8dce22219cace94498ad84b8682156db094f\"},{\"id\":\"beta\",\"text_sha256\":\"4b9b829c964f352d2bd7df21ff8631b8057886317de9dd72c887c5816b1b4ac8\"}]"
+        ],
+        "value": "0",
+        "leaderOnly": false
+      },
+      "intendedAt": "2026-10-26T11:07:38.498Z",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "hash": "0x9e7477dadcdb6ca9887ed42c5ac2ccf9d68339e613e665b6016a3cc4596de192",
+      "submittedAt": "2026-10-26T11:07:40.511Z",
+      "executionResult": "SUCCESS",
+      "consensusResult": "MAJORITY_AGREE",
+      "leaderOnly": false,
+      "votes": {
+        "0x007d6451555Df7765c707284F844137927aE4e5E": "idle",
+        "0x378aED3bA912Ce77C3C66155961A7e61C2fE8F3B": "agree",
+        "0x4619C8420D50c9dE477DB2CBb7b4863A041688CB": "agree",
+        "0x5e84e17266a193077728229751aC8A1dD24be146": "idle",
+        "0xcab45E3fe9cC9592B5C378E47734E022b7Df80c9": "agree"
+      },
+      "createdAt": "2026-10-26T11:07:40.500023+00:00",
+      "observedAt": "2026-10-26T11:09:05.400Z"
+    }
+  ],
+  "negativeTransactions": [
+    {
+      "label": "missing-third-edge",
+      "spec": {
+        "kind": "call",
+        "address": "0xDBb17Dbc2Eb461055dab1776a45f04896A7afad3",
+        "actor": "0x490bF6B423D6A85C88397d56E5120C483c2393F3",
+        "method": "certify_group",
+        "args": [
+          "csv-demo-v1",
+          "invalid-three",
+          "[\"alpha\",\"beta\",\"gamma\"]"
+        ],
+        "value": "0",
+        "leaderOnly": false,
+        "expectedRollback": "Missing pair evidence; transitive grouping is forbidden"
+      },
+      "intendedAt": "2026-10-26T10:04:51.942Z",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "hash": "0x2ad1f183bda45ac2e2e681c9be86979f71857402705577d1e117610253c22d25",
+      "submittedAt": "2026-10-26T10:04:54.131Z",
+      "executionResult": "ERROR",
+      "consensusResult": "MAJORITY_AGREE",
+      "leaderOnly": false,
+      "votes": {
+        "0x007d6451555Df7765c707284F844137927aE4e5E": "agree",
+        "0x045291B293B9D68969c18B6637A8258038cf787A": "agree",
+        "0x4619C8420D50c9dE477DB2CBb7b4863A041688CB": "agree",
+        "0xCe0B66448435cA53665C954705Abd753515594Cf": "idle",
+        "0xe06A34A1eBd398AF3399d08593B8c3C433CdD947": "agree"
+      },
+      "createdAt": "2026-10-26T10:04:53.804774+00:00",
+      "observedAt": "2026-10-26T11:09:07.897Z",
+      "expectedFailure": true,
+      "expectedRollbackVerified": true,
+      "decodedRollback": "Missing pair evidence; transitive grouping is forbidden",
+      "leaderResultStatus": "rollback",
+      "outcome": "EXPECTED_REJECTION"
+    },
+    {
+      "label": "wrong-consumer-scope",
+      "spec": {
+        "kind": "call",
+        "address": "0x81D1eb6fF7684D9dA5A33F165Ad136C6EDA43FE1",
+        "actor": "0x11e7165C24264B39c04347936Da2F812ea40EA52",
+        "method": "consume",
+        "args": [
+          "incorrect-scope",
+          "0x490bf6b423d6a85c88397d56e5120c483c2393f3",
+          "csv-demo-v1",
+          "open-filter-duplicate",
+          "74b85ed1f9bc4ae0c0f4c7dce79a2c694d44c6a771ea4635dd0613a41d47a677",
+          "71f883b0dcc774a88b1644898848f115e87406de1dc07982e4e6d2b457bcd6f7",
+          "0000000000000000000000000000000000000000000000000000000000000000",
+          "[{\"id\":\"alpha\",\"text_sha256\":\"8e28072f2208af7c72200255f82e8dce22219cace94498ad84b8682156db094f\"},{\"id\":\"beta\",\"text_sha256\":\"4b9b829c964f352d2bd7df21ff8631b8057886317de9dd72c887c5816b1b4ac8\"}]"
+        ],
+        "value": "0",
+        "leaderOnly": false,
+        "expectedRollback": "Batch or scope differs from consumer intent"
+      },
+      "intendedAt": "2026-10-26T11:08:07.637Z",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "hash": "0x74dd5fce638ae8694b387298d23a4ede1fa8764c06c22247f04902ae14a2a6a3",
+      "submittedAt": "2026-10-26T11:08:11.498Z",
+      "executionResult": "ERROR",
+      "consensusResult": "MAJORITY_AGREE",
+      "leaderOnly": false,
+      "votes": {
+        "0x0eb3859451817bC25Cc717D4F676D54D0D3aD0aE": "agree",
+        "0x378aED3bA912Ce77C3C66155961A7e61C2fE8F3B": "idle",
+        "0x4868b172ddEBC18b5219aaCeAB77ae0Df330c83A": "agree",
+        "0x5847AF34a4e5bA96490f8c883598f68EC9B0B907": "agree",
+        "0xB4EE99165ffe987E64B7b72e45a753309c501eef": "agree"
+      },
+      "createdAt": "2026-10-26T11:08:11.383165+00:00",
+      "observedAt": "2026-10-26T11:09:09.821Z",
+      "expectedFailure": true,
+      "expectedRollbackVerified": true,
+      "decodedRollback": "Batch or scope differs from consumer intent",
+      "leaderResultStatus": "rollback",
+      "outcome": "EXPECTED_REJECTION"
+    }
+  ],
+  "incomplete": [
+    "compare-beta-gamma: FINALIZED / MAJORITY_DISAGREE; no stored pair",
+    "compare-alpha-gamma: not attempted after the disagreement",
+    "nonduplicate-third-member: not attempted without complete pair coverage"
+  ],
+  "diagnosis": {
+    "failedTransaction": "0xbd370396f4569a8e4abe206b3fcab6ae5222713558d477430d5d920f42e47c75",
+    "leaderTuple": {
+      "scope_fit": "BOTH",
+      "trigger": "DISJOINT",
+      "symptom": "DIFFERENT",
+      "context": "SAME",
+      "consistency": "CONSISTENT"
+    },
+    "exactRejectionCause": "Not recoverable: validator tuples and audit booleans were not logged; stdout/stderr are empty for all three disagreeing validators.",
+    "candidates": [
+      "Independent semantic dimension mismatch",
+      "Citation or dimension audit rejection",
+      "Caught parser/model exception"
+    ],
+    "sourceUnchanged": true,
+    "fixtureUnchanged": true,
+    "failedCalldataRetried": false
+  }
+}

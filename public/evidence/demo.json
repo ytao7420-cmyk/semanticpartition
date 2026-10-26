@@ -1,0 +1,598 @@
+{
+  "verified": true,
+  "recordedAt": "2026-10-26T11:38:00.255Z",
+  "network": "GenLayer Studionet",
+  "chainId": 61999,
+  "providerAddress": "0x77281Bd457CC53d6E2Da4a2B6D4223dda86DEC35",
+  "consumerAddress": "0x45fd9AD9B58cCc6207e9b7120781A457AD4c5d4D",
+  "sourceSha256": {
+    "provider": "798396ef6d331453a1f6984e96314baa502f321b8550d19678667848576cf308",
+    "consumer": "04670e87f31a16cc46a323e31b72db27b6a2076cb651a28087468c6c60701f6f"
+  },
+  "presetDigest": "2a59f8e8866f5bcc709dfc435fb36ecee2a68ca0a3387e4bd4dcf0906cfe4ee8",
+  "actors": {
+    "creator": "0x490bF6B423D6A85C88397d56E5120C483c2393F3",
+    "consumer": "0x11e7165C24264B39c04347936Da2F812ea40EA52"
+  },
+  "notice": "Synthetic issue reports and project-controlled actors. This is a bounded description comparison, not an authenticated software defect or root-cause claim. Studionet only, zero value.",
+  "batch": {
+    "chain_id": 61999,
+    "digest": "9dfb28c812c074aae2dbc5542db3aaf52755cae317e7837a063cdf0e70aec219",
+    "id": "csv-demo-v1",
+    "input_provenance": "Caller-asserted descriptions; not authenticated root causes",
+    "owner": "0x490bf6b423d6a85c88397d56e5120c483c2393f3",
+    "protocol": "semanticpartition-complete-edge-v1",
+    "provider": "0x77281bd457cc53d6e2da4a2b6d4223dda86dec35",
+    "reports": [
+      {
+        "id": "alpha",
+        "lines": [
+          "Context: AtlasDesk 3.2, desktop Firefox 125, English UI.",
+          "Steps: set the status filter to Open, then select Export CSV.",
+          "Observed: two Open rows are visible; download completes but the CSV contains only column headers and no data rows.",
+          "No claim about the internal cause is made."
+        ],
+        "text": "Context: AtlasDesk 3.2, desktop Firefox 125, English UI.\nSteps: set the status filter to Open, then select Export CSV.\nObserved: two Open rows are visible; download completes but the CSV contains only column headers and no data rows.\nNo claim about the internal cause is made.",
+        "text_sha256": "8e28072f2208af7c72200255f82e8dce22219cace94498ad84b8682156db094f"
+      },
+      {
+        "id": "beta",
+        "lines": [
+          "Context: AtlasDesk 3.2, desktop Firefox 125, English UI.",
+          "Steps: apply the Open-status filter and click Export CSV.",
+          "Observed: the completed CSV has its column header but omits both Open rows displayed in the filtered list.",
+          "The internal cause was not investigated."
+        ],
+        "text": "Context: AtlasDesk 3.2, desktop Firefox 125, English UI.\nSteps: apply the Open-status filter and click Export CSV.\nObserved: the completed CSV has its column header but omits both Open rows displayed in the filtered list.\nThe internal cause was not investigated.",
+        "text_sha256": "4b9b829c964f352d2bd7df21ff8631b8057886317de9dd72c887c5816b1b4ac8"
+      },
+      {
+        "id": "gamma",
+        "lines": [
+          "Context: AtlasDesk 3.2, desktop Firefox 125, English UI.",
+          "Steps: leave the status filter unset and click Export CSV.",
+          "Observed: all data rows are present in the completed CSV, but accented names become replacement characters.",
+          "The internal cause was not investigated."
+        ],
+        "text": "Context: AtlasDesk 3.2, desktop Firefox 125, English UI.\nSteps: leave the status filter unset and click Export CSV.\nObserved: all data rows are present in the completed CSV, but accented names become replacement characters.\nThe internal cause was not investigated.",
+        "text_sha256": "755774516db70de939b5d2dc0bfa02ca1b94d8ce654dc43aac209fb653a9caac"
+      }
+    ],
+    "scope": "Compare AtlasDesk 3.2 desktop Firefox 125 CSV export reports by their exact triggering filter/steps, observable downloaded-file symptom and stated product/version/browser context. All CSV export reports are in scope; shared export vocabulary alone does not establish the same observable issue.",
+    "scope_sha256": "19c075387932ebcf610fdc24cdeaa195d6d3e2eb0ea53906db9b5cd336836632"
+  },
+  "pairs": [
+    {
+      "batch_digest": "9dfb28c812c074aae2dbc5542db3aaf52755cae317e7837a063cdf0e70aec219",
+      "chain_id": 61999,
+      "digest": "5dcb62d1611756ca77b0a8d88938cf53400ea655fc5fe5d81ac0b98020ce59b2",
+      "members": [
+        {
+          "id": "alpha",
+          "text_sha256": "8e28072f2208af7c72200255f82e8dce22219cace94498ad84b8682156db094f"
+        },
+        {
+          "id": "beta",
+          "text_sha256": "4b9b829c964f352d2bd7df21ff8631b8057886317de9dd72c887c5816b1b4ac8"
+        }
+      ],
+      "protocol": "semanticpartition-complete-edge-v1",
+      "provider": "0x77281bd457cc53d6e2da4a2b6d4223dda86dec35",
+      "reason_provenance": "Leader-authored explanation; dimensions and substantive citations independently audited",
+      "relation": "DUPLICATE",
+      "scope_sha256": "19c075387932ebcf610fdc24cdeaa195d6d3e2eb0ea53906db9b5cd336836632",
+      "semantics": {
+        "consistency": "CONSISTENT",
+        "context": "SAME",
+        "left_spans": [
+          {
+            "end": 1,
+            "quote": "Context: AtlasDesk 3.2, desktop Firefox 125, English UI.",
+            "start": 1
+          },
+          {
+            "end": 3,
+            "quote": "Steps: set the status filter to Open, then select Export CSV.\nObserved: two Open rows are visible; download completes but the CSV contains only column headers and no data rows.",
+            "start": 2
+          }
+        ],
+        "reason": "Both reports state identical context (AtlasDesk 3.2, desktop Firefox 125, English UI), equivalent trigger steps (apply Open status filter then Export CSV), and the same observable symptom (CSV download completes with header row only, omitting the two Open rows shown in the filtered list). Neither asserts an internal cause, and no facts conflict.",
+        "right_spans": [
+          {
+            "end": 1,
+            "quote": "Context: AtlasDesk 3.2, desktop Firefox 125, English UI.",
+            "start": 1
+          },
+          {
+            "end": 3,
+            "quote": "Steps: apply the Open-status filter and click Export CSV.\nObserved: the completed CSV has its column header but omits both Open rows displayed in the filtered list.",
+            "start": 2
+          }
+        ],
+        "scope_fit": "BOTH",
+        "symptom": "SAME",
+        "trigger": "SAME"
+      }
+    },
+    {
+      "batch_digest": "9dfb28c812c074aae2dbc5542db3aaf52755cae317e7837a063cdf0e70aec219",
+      "chain_id": 61999,
+      "digest": "2f20dd1f2a2d1497c19c81f95a88a9158c2c5096e525cc6b2eb7905e2a685f2c",
+      "members": [
+        {
+          "id": "beta",
+          "text_sha256": "4b9b829c964f352d2bd7df21ff8631b8057886317de9dd72c887c5816b1b4ac8"
+        },
+        {
+          "id": "gamma",
+          "text_sha256": "755774516db70de939b5d2dc0bfa02ca1b94d8ce654dc43aac209fb653a9caac"
+        }
+      ],
+      "protocol": "semanticpartition-complete-edge-v1",
+      "provider": "0x77281bd457cc53d6e2da4a2b6d4223dda86dec35",
+      "reason_provenance": "Leader-authored explanation; dimensions and substantive citations independently audited",
+      "relation": "DISTINCT",
+      "scope_sha256": "19c075387932ebcf610fdc24cdeaa195d6d3e2eb0ea53906db9b5cd336836632",
+      "semantics": {
+        "consistency": "CONSISTENT",
+        "context": "SAME",
+        "left_spans": [
+          {
+            "end": 3,
+            "quote": "Context: AtlasDesk 3.2, desktop Firefox 125, English UI.\nSteps: apply the Open-status filter and click Export CSV.\nObserved: the completed CSV has its column header but omits both Open rows displayed in the filtered list.",
+            "start": 1
+          }
+        ],
+        "reason": "Both reports are in scope because each describes AtlasDesk 3.2 desktop Firefox 125 CSV export behavior with explicit steps and observed file results. The triggers differ concretely: one applies the Open-status filter before export, the other leaves status unset. The symptoms also differ concretely: one omits displayed Open rows from the CSV, while the other includes all rows but corrupts accented characters. Their stated product/browser/UI context matches, and there is no contradiction.",
+        "right_spans": [
+          {
+            "end": 3,
+            "quote": "Context: AtlasDesk 3.2, desktop Firefox 125, English UI.\nSteps: leave the status filter unset and click Export CSV.\nObserved: all data rows are present in the completed CSV, but accented names become replacement characters.",
+            "start": 1
+          }
+        ],
+        "scope_fit": "BOTH",
+        "symptom": "DIFFERENT",
+        "trigger": "DISJOINT"
+      }
+    },
+    {
+      "batch_digest": "9dfb28c812c074aae2dbc5542db3aaf52755cae317e7837a063cdf0e70aec219",
+      "chain_id": 61999,
+      "digest": "930fe3a88a47015770d506f417f24a0e41680df10ea98c1fd62c70684a921972",
+      "members": [
+        {
+          "id": "alpha",
+          "text_sha256": "8e28072f2208af7c72200255f82e8dce22219cace94498ad84b8682156db094f"
+        },
+        {
+          "id": "gamma",
+          "text_sha256": "755774516db70de939b5d2dc0bfa02ca1b94d8ce654dc43aac209fb653a9caac"
+        }
+      ],
+      "protocol": "semanticpartition-complete-edge-v1",
+      "provider": "0x77281bd457cc53d6e2da4a2b6d4223dda86dec35",
+      "reason_provenance": "Leader-authored explanation; dimensions and substantive citations independently audited",
+      "relation": "DISTINCT",
+      "scope_sha256": "19c075387932ebcf610fdc24cdeaa195d6d3e2eb0ea53906db9b5cd336836632",
+      "semantics": {
+        "consistency": "CONSISTENT",
+        "context": "SAME",
+        "left_spans": [
+          {
+            "end": 1,
+            "quote": "Context: AtlasDesk 3.2, desktop Firefox 125, English UI.",
+            "start": 1
+          },
+          {
+            "end": 3,
+            "quote": "Steps: set the status filter to Open, then select Export CSV.\nObserved: two Open rows are visible; download completes but the CSV contains only column headers and no data rows.",
+            "start": 2
+          }
+        ],
+        "reason": "Both reports cite identical AtlasDesk 3.2, Firefox 125 context. Left requires 'status filter=Open' and yields CSV with no data rows; right uses 'filter unset' and yields CSV with mojibake accented names. Triggers and symptoms differ; no factual contradictions.",
+        "right_spans": [
+          {
+            "end": 1,
+            "quote": "Context: AtlasDesk 3.2, desktop Firefox 125, English UI.",
+            "start": 1
+          },
+          {
+            "end": 3,
+            "quote": "Steps: leave the status filter unset and click Export CSV.\nObserved: all data rows are present in the completed CSV, but accented names become replacement characters.",
+            "start": 2
+          }
+        ],
+        "scope_fit": "BOTH",
+        "symptom": "DIFFERENT",
+        "trigger": "DISJOINT"
+      }
+    }
+  ],
+  "certificate": {
+    "batch_digest": "9dfb28c812c074aae2dbc5542db3aaf52755cae317e7837a063cdf0e70aec219",
+    "batch_id": "csv-demo-v1",
+    "chain_id": 61999,
+    "coverage": "All internal report pairs only; no authenticated root cause, optimal partition or inter-group distinctness",
+    "digest": "817e1ba03f0a62046b346e71ceb2ac3cc7461b7847749c83eb1c00f21202e373",
+    "id": "open-filter-duplicate",
+    "members": [
+      {
+        "id": "alpha",
+        "text_sha256": "8e28072f2208af7c72200255f82e8dce22219cace94498ad84b8682156db094f"
+      },
+      {
+        "id": "beta",
+        "text_sha256": "4b9b829c964f352d2bd7df21ff8631b8057886317de9dd72c887c5816b1b4ac8"
+      }
+    ],
+    "members_sha256": "d58554a9314e223dbe981e931155ec1cb28b9479f664cc626f6a2f2a962db8af",
+    "owner": "0x490bf6b423d6a85c88397d56e5120c483c2393f3",
+    "pair_count": 1,
+    "pair_digests": [
+      "5dcb62d1611756ca77b0a8d88938cf53400ea655fc5fe5d81ac0b98020ce59b2"
+    ],
+    "protocol": "semanticpartition-complete-edge-v1",
+    "provider": "0x77281bd457cc53d6e2da4a2b6d4223dda86dec35",
+    "relation": "COMPLETE_DUPLICATE_CLIQUE",
+    "scope_sha256": "19c075387932ebcf610fdc24cdeaa195d6d3e2eb0ea53906db9b5cd336836632"
+  },
+  "consumerReceipt": {
+    "batch_digest": "9dfb28c812c074aae2dbc5542db3aaf52755cae317e7837a063cdf0e70aec219",
+    "batch_id": "csv-demo-v1",
+    "certificate_digest": "817e1ba03f0a62046b346e71ceb2ac3cc7461b7847749c83eb1c00f21202e373",
+    "certificate_id": "open-filter-duplicate",
+    "chain_id": 61999,
+    "consumer": "0x11e7165c24264b39c04347936da2f812ea40ea52",
+    "consumer_contract": "0x45fd9ad9b58ccc6207e9b7120781a457ad4c5d4d",
+    "digest": "f4bba9b8da410e72327e2bf7fde96fbcb8ca99f52ec607976d2290946638b735",
+    "id": "consume-group",
+    "members": [
+      {
+        "id": "alpha",
+        "text_sha256": "8e28072f2208af7c72200255f82e8dce22219cace94498ad84b8682156db094f"
+      },
+      {
+        "id": "beta",
+        "text_sha256": "4b9b829c964f352d2bd7df21ff8631b8057886317de9dd72c887c5816b1b4ac8"
+      }
+    ],
+    "members_sha256": "d58554a9314e223dbe981e931155ec1cb28b9479f664cc626f6a2f2a962db8af",
+    "owner": "0x490bf6b423d6a85c88397d56e5120c483c2393f3",
+    "pair_count": 1,
+    "provider": "0x77281bd457cc53d6e2da4a2b6d4223dda86dec35",
+    "purpose": "Explicit reliance on an immutable bounded report group",
+    "scope_sha256": "19c075387932ebcf610fdc24cdeaa195d6d3e2eb0ea53906db9b5cd336836632"
+  },
+  "negativeConsumerReadBack": null,
+  "invalidGroupReadBack": null,
+  "transactions": [
+    {
+      "label": "freeze-batch",
+      "spec": {
+        "kind": "call",
+        "address": "0x77281Bd457CC53d6E2Da4a2B6D4223dda86DEC35",
+        "actor": "0x490bF6B423D6A85C88397d56E5120C483c2393F3",
+        "method": "freeze_batch",
+        "args": [
+          "csv-demo-v1",
+          "Compare AtlasDesk 3.2 desktop Firefox 125 CSV export reports by their exact triggering filter/steps, observable downloaded-file symptom and stated product/version/browser context. All CSV export reports are in scope; shared export vocabulary alone does not establish the same observable issue.",
+          "[{\"id\":\"alpha\",\"text\":\"Context: AtlasDesk 3.2, desktop Firefox 125, English UI.\\nSteps: set the status filter to Open, then select Export CSV.\\nObserved: two Open rows are visible; download completes but the CSV contains only column headers and no data rows.\\nNo claim about the internal cause is made.\"},{\"id\":\"beta\",\"text\":\"Context: AtlasDesk 3.2, desktop Firefox 125, English UI.\\nSteps: apply the Open-status filter and click Export CSV.\\nObserved: the completed CSV has its column header but omits both Open rows displayed in the filtered list.\\nThe internal cause was not investigated.\"},{\"id\":\"gamma\",\"text\":\"Context: AtlasDesk 3.2, desktop Firefox 125, English UI.\\nSteps: leave the status filter unset and click Export CSV.\\nObserved: all data rows are present in the completed CSV, but accented names become replacement characters.\\nThe internal cause was not investigated.\"}]"
+        ],
+        "value": "0",
+        "leaderOnly": false
+      },
+      "intendedAt": "2026-10-26T11:32:27.522Z",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "hash": "0x13eb6cc4c745bc6951f690d2734ece9e8c8ad107b9adc3e53ce16b8a8373a0cc",
+      "submittedAt": "2026-10-26T11:32:30.177Z",
+      "executionResult": "SUCCESS",
+      "consensusResult": "MAJORITY_AGREE",
+      "leaderOnly": false,
+      "votes": {
+        "0x007d6451555Df7765c707284F844137927aE4e5E": "agree",
+        "0x0eb3859451817bC25Cc717D4F676D54D0D3aD0aE": "agree",
+        "0x336458747913FE397be82c4F0926ACeB3ab13618": "agree",
+        "0x378aED3bA912Ce77C3C66155961A7e61C2fE8F3B": "agree",
+        "0xF7D08d12dB37D3e02D1833b5cB7e56B07F114186": "agree"
+      },
+      "createdAt": "2026-10-26T11:32:30.169822+00:00",
+      "observedAt": "2026-10-26T11:37:49.265Z"
+    },
+    {
+      "label": "compare-alpha-beta",
+      "spec": {
+        "kind": "call",
+        "address": "0x77281Bd457CC53d6E2Da4a2B6D4223dda86DEC35",
+        "actor": "0x490bF6B423D6A85C88397d56E5120C483c2393F3",
+        "method": "compare_pair",
+        "args": [
+          "csv-demo-v1",
+          "alpha",
+          "beta"
+        ],
+        "value": "0",
+        "leaderOnly": false
+      },
+      "intendedAt": "2026-10-26T11:32:38.264Z",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "hash": "0x07c8a785de342bc0da26633bd6ca088ab96f63a453110f2d8f3803f649eab593",
+      "submittedAt": "2026-10-26T11:32:39.934Z",
+      "executionResult": "SUCCESS",
+      "consensusResult": "MAJORITY_AGREE",
+      "leaderOnly": false,
+      "votes": {
+        "0x007d6451555Df7765c707284F844137927aE4e5E": "agree",
+        "0x045291B293B9D68969c18B6637A8258038cf787A": "disagree",
+        "0x378aED3bA912Ce77C3C66155961A7e61C2fE8F3B": "agree",
+        "0x5D9Ee6E9aAF2F0b739314A52dd9Da57cd8866dA8": "disagree",
+        "0xF7D08d12dB37D3e02D1833b5cB7e56B07F114186": "agree"
+      },
+      "createdAt": "2026-10-26T11:32:39.883545+00:00",
+      "observedAt": "2026-10-26T11:37:51.288Z"
+    },
+    {
+      "label": "certify-two",
+      "spec": {
+        "kind": "call",
+        "address": "0x77281Bd457CC53d6E2Da4a2B6D4223dda86DEC35",
+        "actor": "0x490bF6B423D6A85C88397d56E5120C483c2393F3",
+        "method": "certify_group",
+        "args": [
+          "csv-demo-v1",
+          "open-filter-duplicate",
+          "[\"alpha\",\"beta\"]"
+        ],
+        "value": "0",
+        "leaderOnly": false
+      },
+      "intendedAt": "2026-10-26T11:33:20.753Z",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "hash": "0xf58f6c0ff808640da2147e6c8033cfa6f8ec59c1009f0b087e6da65a6b9afcd1",
+      "submittedAt": "2026-10-26T11:33:22.770Z",
+      "executionResult": "SUCCESS",
+      "consensusResult": "MAJORITY_AGREE",
+      "leaderOnly": false,
+      "votes": {
+        "0x378aED3bA912Ce77C3C66155961A7e61C2fE8F3B": "agree",
+        "0x4619C8420D50c9dE477DB2CBb7b4863A041688CB": "agree",
+        "0xB4EE99165ffe987E64B7b72e45a753309c501eef": "agree",
+        "0xCe0B66448435cA53665C954705Abd753515594Cf": "agree",
+        "0xcab45E3fe9cC9592B5C378E47734E022b7Df80c9": "agree"
+      },
+      "createdAt": "2026-10-26T11:33:22.620211+00:00",
+      "observedAt": "2026-10-26T11:37:53.633Z"
+    },
+    {
+      "label": "compare-beta-gamma",
+      "spec": {
+        "kind": "call",
+        "address": "0x77281Bd457CC53d6E2Da4a2B6D4223dda86DEC35",
+        "actor": "0x490bF6B423D6A85C88397d56E5120C483c2393F3",
+        "method": "compare_pair",
+        "args": [
+          "csv-demo-v1",
+          "beta",
+          "gamma"
+        ],
+        "value": "0",
+        "leaderOnly": false
+      },
+      "intendedAt": "2026-10-26T11:33:36.899Z",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "hash": "0xe8e69055d008d86f0866cf3e4c4a37a35db6a80fe61b040c3cb1dfee74395915",
+      "submittedAt": "2026-10-26T11:33:39.724Z",
+      "executionResult": "SUCCESS",
+      "consensusResult": "MAJORITY_AGREE",
+      "leaderOnly": false,
+      "votes": {
+        "0x045291B293B9D68969c18B6637A8258038cf787A": "agree",
+        "0x378aED3bA912Ce77C3C66155961A7e61C2fE8F3B": "agree",
+        "0x4441Ebe37E72c039B73f1D6CF8C6DEe277FE547a": "agree",
+        "0x4868b172ddEBC18b5219aaCeAB77ae0Df330c83A": "disagree",
+        "0xB4EE99165ffe987E64B7b72e45a753309c501eef": "disagree"
+      },
+      "createdAt": "2026-10-26T11:33:39.338809+00:00",
+      "observedAt": "2026-10-26T11:37:55.731Z"
+    },
+    {
+      "label": "compare-alpha-gamma",
+      "spec": {
+        "kind": "call",
+        "address": "0x77281Bd457CC53d6E2Da4a2B6D4223dda86DEC35",
+        "actor": "0x490bF6B423D6A85C88397d56E5120C483c2393F3",
+        "method": "compare_pair",
+        "args": [
+          "csv-demo-v1",
+          "alpha",
+          "gamma"
+        ],
+        "value": "0",
+        "leaderOnly": false
+      },
+      "intendedAt": "2026-10-26T11:34:40.079Z",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "hash": "0x8e4853562c1ae7ad84a527fbd00f141c7348088ec99da09f89300d63419ae8a3",
+      "submittedAt": "2026-10-26T11:34:42.467Z",
+      "executionResult": "SUCCESS",
+      "consensusResult": "MAJORITY_AGREE",
+      "leaderOnly": false,
+      "votes": {
+        "0x336458747913FE397be82c4F0926ACeB3ab13618": "agree",
+        "0x4868b172ddEBC18b5219aaCeAB77ae0Df330c83A": "agree",
+        "0x9C182DE7F93AdbE8ee3D62570613eC23c5683cAc": "disagree",
+        "0xCe0B66448435cA53665C954705Abd753515594Cf": "disagree",
+        "0xcab45E3fe9cC9592B5C378E47734E022b7Df80c9": "agree"
+      },
+      "createdAt": "2026-10-26T11:34:42.325297+00:00",
+      "observedAt": "2026-10-26T11:37:57.937Z"
+    },
+    {
+      "label": "consume-exact-group",
+      "spec": {
+        "kind": "call",
+        "address": "0x45fd9AD9B58cCc6207e9b7120781A457AD4c5d4D",
+        "actor": "0x11e7165C24264B39c04347936Da2F812ea40EA52",
+        "method": "consume",
+        "args": [
+          "consume-group",
+          "0x490bf6b423d6a85c88397d56e5120c483c2393f3",
+          "csv-demo-v1",
+          "open-filter-duplicate",
+          "817e1ba03f0a62046b346e71ceb2ac3cc7461b7847749c83eb1c00f21202e373",
+          "9dfb28c812c074aae2dbc5542db3aaf52755cae317e7837a063cdf0e70aec219",
+          "19c075387932ebcf610fdc24cdeaa195d6d3e2eb0ea53906db9b5cd336836632",
+          "[{\"id\":\"alpha\",\"text_sha256\":\"8e28072f2208af7c72200255f82e8dce22219cace94498ad84b8682156db094f\"},{\"id\":\"beta\",\"text_sha256\":\"4b9b829c964f352d2bd7df21ff8631b8057886317de9dd72c887c5816b1b4ac8\"}]"
+        ],
+        "value": "0",
+        "leaderOnly": false
+      },
+      "intendedAt": "2026-10-26T11:37:17.687Z",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "hash": "0xd9282d366095980f21b6ee3432a05102fb6969a9d620a10add3b8343ad0d9f3d",
+      "submittedAt": "2026-10-26T11:37:19.365Z",
+      "executionResult": "SUCCESS",
+      "consensusResult": "MAJORITY_AGREE",
+      "leaderOnly": false,
+      "votes": {
+        "0x378aED3bA912Ce77C3C66155961A7e61C2fE8F3B": "idle",
+        "0x5847AF34a4e5bA96490f8c883598f68EC9B0B907": "agree",
+        "0x5e84e17266a193077728229751aC8A1dD24be146": "agree",
+        "0xF7D08d12dB37D3e02D1833b5cB7e56B07F114186": "agree",
+        "0xe06A34A1eBd398AF3399d08593B8c3C433CdD947": "idle"
+      },
+      "createdAt": "2026-10-26T11:37:19.353664+00:00",
+      "observedAt": "2026-10-26T11:38:00.235Z"
+    }
+  ],
+  "negativeTransactions": [
+    {
+      "label": "missing-third-edge",
+      "spec": {
+        "kind": "call",
+        "address": "0x77281Bd457CC53d6E2Da4a2B6D4223dda86DEC35",
+        "actor": "0x490bF6B423D6A85C88397d56E5120C483c2393F3",
+        "method": "certify_group",
+        "args": [
+          "csv-demo-v1",
+          "invalid-three",
+          "[\"alpha\",\"beta\",\"gamma\"]"
+        ],
+        "value": "0",
+        "leaderOnly": false,
+        "expectedRollback": "Missing pair evidence; transitive grouping is forbidden"
+      },
+      "intendedAt": "2026-10-26T11:33:28.398Z",
+      "status": "ACCEPTED",
+      "execution": "ERROR",
+      "hash": "0xdc933349320c1d30244f5e105e4f5e9290aab01636e38c847815387489c25cfc",
+      "submittedAt": "2026-10-26T11:33:31.768Z",
+      "executionResult": "ERROR",
+      "consensusResult": "MAJORITY_AGREE",
+      "leaderOnly": false,
+      "votes": {
+        "0x0eb3859451817bC25Cc717D4F676D54D0D3aD0aE": "idle",
+        "0x336458747913FE397be82c4F0926ACeB3ab13618": "idle",
+        "0x4441Ebe37E72c039B73f1D6CF8C6DEe277FE547a": "agree",
+        "0xCe0B66448435cA53665C954705Abd753515594Cf": "agree",
+        "0xcab45E3fe9cC9592B5C378E47734E022b7Df80c9": "agree"
+      },
+      "createdAt": "2026-10-26T11:33:31.513767+00:00",
+      "observedAt": "2026-10-26T11:33:36.898Z",
+      "expectedFailure": true,
+      "expectedRollbackVerified": true,
+      "decodedRollback": "Missing pair evidence; transitive grouping is forbidden",
+      "leaderResultStatus": "rollback",
+      "outcome": "EXPECTED_REJECTION"
+    },
+    {
+      "label": "nonduplicate-third-member",
+      "spec": {
+        "kind": "call",
+        "address": "0x77281Bd457CC53d6E2Da4a2B6D4223dda86DEC35",
+        "actor": "0x490bF6B423D6A85C88397d56E5120C483c2393F3",
+        "method": "certify_group",
+        "args": [
+          "csv-demo-v1",
+          "invalid-three",
+          "[\"alpha\",\"beta\",\"gamma\"]"
+        ],
+        "value": "0",
+        "leaderOnly": false,
+        "expectedRollback": "Every group pair must independently establish DUPLICATE"
+      },
+      "intendedAt": "2026-10-26T11:36:21.676Z",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "hash": "0x3b1cacfb72f4112ff5e1988d1f1ce1f40dec5adb77698c9025eca3c6142e41c3",
+      "submittedAt": "2026-10-26T11:36:23.456Z",
+      "executionResult": "ERROR",
+      "consensusResult": "MAJORITY_AGREE",
+      "leaderOnly": false,
+      "votes": {
+        "0x0eb3859451817bC25Cc717D4F676D54D0D3aD0aE": "agree",
+        "0x4441Ebe37E72c039B73f1D6CF8C6DEe277FE547a": "agree",
+        "0x5e84e17266a193077728229751aC8A1dD24be146": "agree",
+        "0x63d72fE364368491E62a42B9C73c317Ce1ca8434": "agree",
+        "0xb04cdDC4a6Ff6A0aDF715cfe00Fa307b901cebD4": "agree"
+      },
+      "createdAt": "2026-10-26T11:36:23.393927+00:00",
+      "observedAt": "2026-10-26T11:37:16.347Z",
+      "expectedFailure": true,
+      "expectedRollbackVerified": true,
+      "decodedRollback": "Every group pair must independently establish DUPLICATE",
+      "leaderResultStatus": "rollback",
+      "outcome": "EXPECTED_REJECTION"
+    },
+    {
+      "label": "wrong-consumer-scope",
+      "spec": {
+        "kind": "call",
+        "address": "0x45fd9AD9B58cCc6207e9b7120781A457AD4c5d4D",
+        "actor": "0x11e7165C24264B39c04347936Da2F812ea40EA52",
+        "method": "consume",
+        "args": [
+          "incorrect-scope",
+          "0x490bf6b423d6a85c88397d56e5120c483c2393f3",
+          "csv-demo-v1",
+          "open-filter-duplicate",
+          "817e1ba03f0a62046b346e71ceb2ac3cc7461b7847749c83eb1c00f21202e373",
+          "9dfb28c812c074aae2dbc5542db3aaf52755cae317e7837a063cdf0e70aec219",
+          "0000000000000000000000000000000000000000000000000000000000000000",
+          "[{\"id\":\"alpha\",\"text_sha256\":\"8e28072f2208af7c72200255f82e8dce22219cace94498ad84b8682156db094f\"},{\"id\":\"beta\",\"text_sha256\":\"4b9b829c964f352d2bd7df21ff8631b8057886317de9dd72c887c5816b1b4ac8\"}]"
+        ],
+        "value": "0",
+        "leaderOnly": false,
+        "expectedRollback": "Batch or scope differs from consumer intent"
+      },
+      "intendedAt": "2026-10-26T11:37:29.075Z",
+      "status": "ACCEPTED",
+      "execution": "ERROR",
+      "hash": "0x396938716698464f14e3b9a88342c38fdb71462287fd92122df150796c0b60f2",
+      "submittedAt": "2026-10-26T11:37:31.310Z",
+      "executionResult": "ERROR",
+      "consensusResult": "MAJORITY_AGREE",
+      "leaderOnly": false,
+      "votes": {
+        "0x007d6451555Df7765c707284F844137927aE4e5E": "idle",
+        "0x0eb3859451817bC25Cc717D4F676D54D0D3aD0aE": "agree",
+        "0x4619C8420D50c9dE477DB2CBb7b4863A041688CB": "idle",
+        "0x5847AF34a4e5bA96490f8c883598f68EC9B0B907": "agree",
+        "0xB4EE99165ffe987E64B7b72e45a753309c501eef": "agree"
+      },
+      "createdAt": "2026-10-26T11:37:30.896162+00:00",
+      "observedAt": "2026-10-26T11:37:38.432Z",
+      "expectedFailure": true,
+      "expectedRollbackVerified": true,
+      "decodedRollback": "Batch or scope differs from consumer intent",
+      "leaderResultStatus": "rollback",
+      "outcome": "EXPECTED_REJECTION"
+    }
+  ]
+}

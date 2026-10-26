@@ -1,0 +1,26 @@
+{
+  "notice": "Synthetic issue reports and project-controlled actors. This is a bounded description comparison, not an authenticated software defect or root-cause claim. Studionet only, zero value.",
+  "batchId": "csv-demo-v1",
+  "certificateId": "open-filter-duplicate",
+  "scope": "Compare AtlasDesk 3.2 desktop Firefox 125 CSV export reports by their exact triggering filter/steps, observable downloaded-file symptom and stated product/version/browser context. All CSV export reports are in scope; shared export vocabulary alone does not establish the same observable issue.",
+  "reports": [
+    {
+      "id": "alpha",
+      "text": "Context: AtlasDesk 3.2, desktop Firefox 125, English UI.\nSteps: set the status filter to Open, then select Export CSV.\nObserved: two Open rows are visible; download completes but the CSV contains only column headers and no data rows.\nNo claim about the internal cause is made."
+    },
+    {
+      "id": "beta",
+      "text": "Context: AtlasDesk 3.2, desktop Firefox 125, English UI.\nSteps: apply the Open-status filter and click Export CSV.\nObserved: the completed CSV has its column header but omits both Open rows displayed in the filtered list.\nThe internal cause was not investigated."
+    },
+    {
+      "id": "gamma",
+      "text": "Context: AtlasDesk 3.2, desktop Firefox 125, English UI.\nSteps: leave the status filter unset and click Export CSV.\nObserved: all data rows are present in the completed CSV, but accented names become replacement characters.\nThe internal cause was not investigated."
+    }
+  ],
+  "pairs": [
+    {"left": "alpha", "right": "beta", "expected": "DUPLICATE"},
+    {"left": "beta", "right": "gamma", "expected": "DISTINCT"},
+    {"left": "alpha", "right": "gamma", "expected": "DISTINCT"}
+  ],
+  "members": ["alpha", "beta"]
+}

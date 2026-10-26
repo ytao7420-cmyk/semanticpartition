@@ -1,0 +1,52 @@
+{
+  "deployed": true,
+  "network": "GenLayer Studionet",
+  "chainId": 61999,
+  "rpc": "https://studio.genlayer.com/api",
+  "explorer": "https://explorer-studio.genlayer.com",
+  "deployer": "0x2E5E607666c90d57a9F73F076Ae030F91E70C364",
+  "provider": {
+    "address": "0x77281Bd457CC53d6E2Da4a2B6D4223dda86DEC35",
+    "sourceSha256": "798396ef6d331453a1f6984e96314baa502f321b8550d19678667848576cf308",
+    "transaction": "0x0a59bef09b66c4adb862a75c72b638c58f216efb6188b101fd7653be6a34dc83",
+    "receipt": {
+      "status": "ACCEPTED",
+      "execution": "SUCCESS",
+      "executionResult": "SUCCESS",
+      "consensusResult": "MAJORITY_AGREE",
+      "leaderOnly": false,
+      "votes": {
+        "0x4619C8420D50c9dE477DB2CBb7b4863A041688CB": "agree",
+        "0x63d72fE364368491E62a42B9C73c317Ce1ca8434": "agree",
+        "0xb04cdDC4a6Ff6A0aDF715cfe00Fa307b901cebD4": "agree",
+        "0xcab45E3fe9cC9592B5C378E47734E022b7Df80c9": "agree",
+        "0xe06A34A1eBd398AF3399d08593B8c3C433CdD947": "agree"
+      },
+      "createdAt": "2026-10-26T11:31:16.945612+00:00",
+      "observedAt": "2026-10-26T11:31:35.257Z"
+    }
+  },
+  "consumer": {
+    "address": "0x45fd9AD9B58cCc6207e9b7120781A457AD4c5d4D",
+    "sourceSha256": "04670e87f31a16cc46a323e31b72db27b6a2076cb651a28087468c6c60701f6f",
+    "transaction": "0x3f3c2dca96f8de8b01a370100deda9aebb838a07d9ca7d328d0ea79c070aeb19",
+    "receipt": {
+      "status": "ACCEPTED",
+      "execution": "SUCCESS",
+      "executionResult": "SUCCESS",
+      "consensusResult": "MAJORITY_AGREE",
+      "leaderOnly": false,
+      "votes": {
+        "0x045291B293B9D68969c18B6637A8258038cf787A": "agree",
+        "0x0eb3859451817bC25Cc717D4F676D54D0D3aD0aE": "agree",
+        "0x5847AF34a4e5bA96490f8c883598f68EC9B0B907": "idle",
+        "0xCe0B66448435cA53665C954705Abd753515594Cf": "agree",
+        "0xb9ed1258763dfFC83356b15e8A20236B86E42ba2": "idle"
+      },
+      "createdAt": "2026-10-26T11:31:27.632101+00:00",
+      "observedAt": "2026-10-26T11:31:35.257Z"
+    }
+  },
+  "recordedAt": "2026-10-26T11:31:35.257Z",
+  "notice": "Synthetic issue reports and project-controlled actors. This is a bounded description comparison, not an authenticated software defect or root-cause claim. Studionet only, zero value."
+}
